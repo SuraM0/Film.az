@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Electrolize", serif;
+}
+
+
+.container{
+    background-color: black;
+    color: white;
+}
+
+.movie-list-container{
+    margin-left: 70px;
+}
+
+/*! NAVBAR */
+.navbar{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo a{
+    text-decoration: none;
+    color: rgb(255, 24, 24);
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 2px;
+}
+
+.menu-list{
+    color: white;
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+    font-size: 18px;
+}
+
+.active{
+    font-weight: bold;
+}
+
+.menu-items:hover{
+    cursor: pointer;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.pp{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hakkinda-div{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: white;
+    font-weight: 500;
+    line-height: 1px;
+}
+
+.hakkinda-div i{
+    cursor: pointer;
+}
+
+.toggle{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 30px;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-ball{
+    background-color: black;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: absolute;
+    right: 1px;
+    transition: ease .35s all;
+}
+
+.toggle-icon{
+    color: goldenrod;
+}
+/*! NAVBAR */
+
+/*! SIDEBAR */
+
+.sidebar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 40px;
+    height: 100%;
+    width: 60px;
+    padding-top: 80px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+}
+
+.sidebar i{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+/*! SIDEBAR */
+
+/*! CONTENT */
+
+.content-wrapper{
+    margin-left:60px;
+}
+
+.featured-content{
+    background: url(spiderman.jpg);
+    height: calc(100vh - 80px);
+    padding: 50px;
+    background-size: 100% 100%;
+}
+
+.content-title{
+    width: 450px;
+}
+
+.featured-content p{
+    background-color: rgba(21, 19, 19, 0.5);
+    width: 500px;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+.featured-buttons{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.featured-buttons button{
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    display: flex;
+    column-gap: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.featured-buttons .bilgi-button{
+    background-color: rgba(145, 142, 142, 0.5);
+    color: white;
+}
+/*! CONTENT */
+
+
+/*! FILTER */
+.movie-list-filter{
+    margin: 20px 0px 20px 50px;
+    padding: 20px;
+}
+
+.movie-list-filter select{
+    background-color: black;
+    color: white;
+    padding: 7px 0px;
+    width: 125px;
+}
+
+/*! FILTER */
+
+.movie-list{
+    list-style: none;
+    height: 300px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    transform: translateX(0);
+    transition: ease-in-out 1s all;
+}
+
+.movie-list-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-item{
+    position: relative;
+}
+
+.movie-item:hover .movie-item-title,
+.movie-item:hover .movie-item-buttons{
+    opacity: 1;
+}
+
+.movie-item:hover .movie-item-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-item-img{
+    width: 270px;
+    height: 180px;
+    object-fit: cover;
+    transition: all ease-in-out 0.8s;
+}
+
+.movie-item-title{
+    background-color: rgb(40, 40, 40,0.4);
+    padding: 0px 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: all ease-in-out 0.8s;
+}
+
+.movie-item-buttons{
+    background-color: rgb(40, 40, 40,0.4);
+    padding: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10%;
+    left: 65px;
+    display: flex;
+    column-gap: 20px;
+    opacity: 0;
+    transition: all ease-in-out 0.8s;
+}
+
+.movie-item-buttons i{
+    cursor: pointer;
+    opacity: .5;
+    transition: all ease 0.15s;
+}
+
+.movie-item-buttons i:hover{
+    opacity: 1;
+}
+
+.arrow{
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    opacity: .5;
+    cursor: pointer;
+    transition: ease 0.5s all;
+}
+
+.arrow:hover{
+    opacity: 1;
+}
+
+/*! Dark mode */
+
+.container.active{
+    background-color: white;
+}
+
+.navbar.active{
+    background-color: white;
+    color: black;
+}
+
+.menu-list.active{
+    color: black;
+}
+
+.hakkinda-div.active{
+    color: black;
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.sidebar i.active{
+    color: black;
+}
+
+.movie-list-title.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+}
+
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+}
+
+.movie-list-filter select.active{
+    background-color: white;
+    color: black;
+}
+
+/*! Dark mode */
+
+/*! responsive */
+
+@media only screen and (max-width: 890px){
+    .menu{
+        display: none;
+    }
+
+    .featured-content{
+        height: 50vh;
+    }
+
+    .content-title{
+        width: 300px;
+    }
+
+    .featured-content p{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        max-width: 300px;
+        padding: 0;
+    }
+}
+
+
+/*! responsive */
