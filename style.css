@@ -356,9 +356,10 @@
         padding: 0;
     }
 
-    .toggle{
-        margin-right: 3px;
-}
+    .navbar{
+        padding: 0 10px;
+    }
 
+}
 
 /*! responsive */
