@@ -340,7 +340,7 @@
     }
 
     .featured-content{
-        height: 60vh;
+        height: 55vh;
     }
 
     .content-title{
@@ -359,7 +359,6 @@
     .navbar{
         padding: 0 10px;
     }
-
 }
 
 /*! responsive */
